@@ -11,8 +11,8 @@ If you use this repository or its contents in your research, please cite the fol
 
 ## Pretrained Models
 Pretrained model weights are available:
-- **Segmentation**: `Checkpoints/Segmentation_model.pth`
-- **Registration**: `Checkpoints/Registration_model.ckpt`
+- **[Segmentation](https://drive.google.com/file/d/1yp9gxjmbFuxI97AUHCsXCJoHYDnxLQf4/view?usp=sharing)**  
+- **[Registration](https://drive.google.com/file/d/1VIDz7vbUY9KGwG1XSQoWKuB4Adi18Hfh/view?usp=sharing)** 
 
 ## Data preparation
 - **Segmentation**: The only way to bring your data into nnU-Net is by storing it in a specific format, see [documentation](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md). 
