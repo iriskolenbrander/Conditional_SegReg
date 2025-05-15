@@ -11,8 +11,8 @@ If you use this repository or its contents in your research, please cite the fol
 
 ## Pretrained Models
 Pretrained model weights are available:
-- **[Segmentation](https://drive.google.com/file/d/1yp9gxjmbFuxI97AUHCsXCJoHYDnxLQf4/view?usp=sharing)**  
-- **[Registration](https://drive.google.com/file/d/1VIDz7vbUY9KGwG1XSQoWKuB4Adi18Hfh/view?usp=sharing)** 
+- **[Segmentation](https://drive.google.com/uc?export=download&id=1yp9gxjmbFuxI97AUHCsXCJoHYDnxLQf4)**  
+- **[Registration](https://drive.google.com/uc?export=download&id=1VIDz7vbUY9KGwG1XSQoWKuB4Adi18Hfh)** 
 
 ## Data preparation
 - **Segmentation**: The only way to bring your data into nnU-Net is by storing it in a specific format, see [documentation](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md). 
