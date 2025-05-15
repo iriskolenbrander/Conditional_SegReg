@@ -1,4 +1,4 @@
-# Incorporating planning contours into deep learning models (Segmentation and Registration)
+# Incorporating planning contours into deep learning models (conditional Segmentation and Registration)
 
 This repository contains code and resources for training, evaluating,
 and applying deep learning models for medical image **segmentation** and **registration**.
