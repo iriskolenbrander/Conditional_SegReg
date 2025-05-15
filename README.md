@@ -11,11 +11,56 @@ If you use this repository or its contents in your research, please cite the fol
 
 ## Pretrained Models
 Pretrained model weights are available:
-- **Segmentation**: `Segmentation/Model_weights_file/`
-- **Registration**: `Registration_model/Model_weights_file/`
-- **Baseline Segmentation** (SegBase): `Segmentation/Model_weights_file/`
-- **Baseline Registration** (RegBase): `Registration_model/Model_weights_file/`
+- **Segmentation**: `Checkpoints/Segmentation_model.pth`
+- **Registration**: `Checkpoints/Registration_model.ckpt`
 
+## Data preparation
+- **Segmentation**: The only way to bring your data into nnU-Net is by storing it in a specific format, see [documentation](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md). 
+- **Registration**: We use a similar format for the input data of the registration model. the following structure is expected:
+
+
+        DatasetRegistration/
+        ├── splits_final.json
+        ├── imagesTr
+        │   ├── Rect5F_001_F1_0000.nii.gz
+        │   ├── Rect5F_001_F2_0000.nii.gz
+        │   ├── Rect5F_001_F3_0000.nii.gz
+        │   ├── Rect5F_001_F4_0000.nii.gz
+        │   ├── Rect5F_001_F5_0000.nii.gz
+        │   ├── Rect5F_001_reftoF1_0000.nii.gz
+        │   ├── Rect5F_001_reftoF2_0000.nii.gz
+        │   ├── Rect5F_001_reftoF3_0000.nii.gz
+        │   ├── Rect5F_001_reftoF4_0000.nii.gz
+        │   ├── Rect5F_001_reftoF5_0000.nii.gz
+        │   ├── Rect5F_002_F1_0000.nii.gz
+        │   ├── ...
+        ├── labelsTr
+        │   ├── Rect5F_001_F1.nii.gz
+        │   ├── Rect5F_001_F2.nii.gz
+        │   ├── Rect5F_001_F3.nii.gz
+        │   ├── Rect5F_001_F4.nii.gz
+        │   ├── Rect5F_001_F5.nii.gz
+        │   ├── Rect5F_001_reftoF1.nii.gz
+        │   ├── Rect5F_001_reftoF2.nii.gz
+        │   ├── ...
+        ├── imagesTs
+        │   ├── Rect5F_001_F1_0000.nii.gz
+        │   ├── Rect5F_001_F2_0000.nii.gz
+        │   ├── Rect5F_001_F3_0000.nii.gz
+        │   ├── Rect5F_001_F4_0000.nii.gz
+        │   ├── Rect5F_001_F5_0000.nii.gz
+        │   ├── Rect5F_001_reftoF1_0000.nii.gz
+        │   ├── Rect5F_001_reftoF2_0000.nii.gz
+        │   ├── ...
+        └── labelsTs
+            ├── Rect5F_001_F1.nii.gz
+            ├── Rect5F_001_F2.nii.gz
+            ├── Rect5F_001_F3.nii.gz
+            ├── Rect5F_001_F4.nii.gz
+            ├── Rect5F_001_F5.nii.gz
+            ├── Rect5F_001_reftoF1.nii.gz
+            ├── ...
+      
 ## Model training and inference
 ### 1. Segmentation
 Segmentation models were developed using the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework . 
@@ -25,6 +70,7 @@ For training and inference, please use the official nnU-Net repository and docum
 The code for training and inference of the registration model is located in the `Registration/` directory.
 
 Requirements:
+- `nnUNetv2` [repository](https://github.com/MIC-DKFZ/nnUNet/tree/master)
 - `dynamic-network-architectures` [repository](https://github.com/MIC-DKFZ/dynamic-network-architectures)
 - `pytorch-lightning` (only required for **Training**)
 - `ml-collections`
